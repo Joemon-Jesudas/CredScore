@@ -1,1 +1,1 @@
-# credscore
+# cred-app
