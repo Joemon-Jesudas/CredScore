@@ -14,7 +14,7 @@ feature_cols = joblib.load(curr_path + "/features.joblib")
 
 with st.form("prediction_form"):
     st.header("Enter the Details to calulate credit Risk")
-
+    st.write("click [here](https://credit-vis.herokuapp.com/) to see visualization")
     Credit_Amount = st.number_input("Enter Credit Amount: ",value=0, format="%d")
     Age = st.number_input("Age: ", value=0, format="%d")
     Duration = st.number_input("Duration(in Months): ", value=0, format="%d")
