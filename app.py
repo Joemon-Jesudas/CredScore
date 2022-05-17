@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit.proto.NumberInput_pb2 import NumberInput
-import model
+from model import predict
 import joblib
 import os
 import numpy as np
@@ -39,7 +39,7 @@ if submit_val:
     attributes = np.array([Checking_Account,Duration,Purpose,Credit_Amount,No_of_credits,Employement,Savings_Account,
                            Deb_gran,Credit_History,Installment_rate,Install_plans,sex,Age,Housing,Job_type,Property,Foreigner])
     print("attributes value")
-    status = model.predict(attributes.reshape(1, -1))
+    status = predict(attributes.reshape(1, -1))
     if status:
         st.error("Bad Credit Rating")
     else:
